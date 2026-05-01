@@ -14,7 +14,6 @@
     "aos": "^2.3.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "react-helmet-async": "^2.0.4",
     "react-router-dom": "^6.26.0",
     "uuid": "^14.0.0"
   },
