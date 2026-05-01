@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@plugin "@iconify/tailwind4";
+
+@theme {
+  --color-app-bg: #070d1f;
+  --color-app-surface: #111a2e;
+  --color-app-primary: #4f80ff;
+  --color-app-accent: #6ee7d8;
+  --color-status-available: #22c55e;
+  --color-status-busy: #ef4444;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100svh;
+    overflow-x: hidden;
+    font-family: "Texturina", serif;
+    background:
+      radial-gradient(circle at top left, rgba(79, 128, 255, 0.22), transparent 35%),
+      radial-gradient(circle at bottom right, rgba(110, 231, 216, 0.18), transparent 35%),
+      var(--color-app-bg);
+  }
+
+  #root {
+    overflow-x: hidden;
+  }
+
+  .custom-dropdown-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(34, 211, 238, 0.55) rgba(15, 23, 42, 0.35);
+  }
+
+  .custom-dropdown-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .custom-dropdown-scroll::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.35);
+    border-radius: 9999px;
+  }
+
+  .custom-dropdown-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(103, 232, 249, 0.9), rgba(34, 211, 238, 0.7));
+    border: 2px solid rgba(15, 23, 42, 0.6);
+    border-radius: 9999px;
+  }
+
+  .custom-dropdown-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(165, 243, 252, 0.95), rgba(34, 211, 238, 0.85));
+  }
+
+  input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+}
+
+@utility glass-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
